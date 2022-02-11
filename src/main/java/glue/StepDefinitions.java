@@ -287,7 +287,8 @@ driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());/
 
  @Then("^user navigates to \"([^\"]*)\" in new tab$")
 public void method11(String param131) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//<CODE>
+// Write code here that turns the phrase above into concrete actions//navigation3
+driver.ExecuteScript("window.open('param131', '_blank');");//<CODE>
 }
 
  //<METHOD>
