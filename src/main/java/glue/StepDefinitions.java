@@ -100,11 +100,6 @@ myDriver.typeOnPage(param21, param22, param23);//<CODE>
   myDriver.typeOnPage(param21, param22, param23);//<CODE>
  }
 
- @When("^user sees \"([^\"]*)\" element$")
- public void method4(String param21) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//null
-  driver.get(param21);<CODE>
- }
 
  @Then("^user types \"([^\"]*)\" into \"([^\"]*)\" textbox$")
  public void method5(String param31, String param32) throws Throwable {
