@@ -271,6 +271,14 @@ Thread.sleep(seconds*milliseconds);//<CODE>
 }
 
 
+ @And("^user opens new tab$")
+public void method9() throws Throwable {
+// Write code here that turns the phrase above into concrete actions//tabs1
+driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL + "t");
+int count = driver.getWindowHandles().size();
+ driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
+}
+
  //<METHOD>
 
 
