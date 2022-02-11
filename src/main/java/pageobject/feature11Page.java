@@ -39,6 +39,8 @@ public static By NextButton = By.xpath("//button[.='Next']");
 
 public static By HydrateButton = By.xpath("//button[contains(.,'HYDRATE')]");
 
+public static By ConnectButton = By.xpath("//button[.='Connect']");
+
 //<XPATHS>
 
 /*Page Constructor*/
