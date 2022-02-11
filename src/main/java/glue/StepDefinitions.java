@@ -279,6 +279,12 @@ int count = driver.getWindowHandles().size();
  driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
 }
 
+ @Then("^user switches to first tab$")
+public void method10() throws Throwable {
+// Write code here that turns the phrase above into concrete actions//tabs3
+driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());//<CODE>
+}
+
  //<METHOD>
 
 
