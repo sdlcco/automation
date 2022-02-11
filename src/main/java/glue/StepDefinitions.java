@@ -34,6 +34,7 @@ import static org.junit.Assert.assertTrue;
 
 
 import org.apache.commons.lang.RandomStringUtils;
+import pageobject.feature11Page;
 //<IMPORTS>
 
 public class StepDefinitions {
@@ -282,7 +283,14 @@ driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());/
 public void method11(String param131) throws Throwable {
 // Write code here that turns the phrase above into concrete actions//navigation3
 driver.ExecuteScript("window.open('param131', '_blank');");//navigation3
-driver.ExecuteScript("window.open(''param131'', '_blank');");//<CODE>
+driver.ExecuteScript("window.open(''param131'', '_blank');");//navigation3
+driver.ExecuteScript("window.open('''param131''', '_blank');");//<CODE>
+}
+
+ @And("^user sees \"([^\"]*)\" element on \"([^\"]*)\" page$")
+public void method11(String param231, String param232) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//exists1
+myDriver.verifyObjectPresentOnPage(param231, param232);//<CODE>
 }
 
  //<METHOD>
