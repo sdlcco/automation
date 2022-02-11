@@ -123,7 +123,7 @@ myDriver.typeOnPage(RandomStringUtils.randomAlphanumeric(20), param31, param32);
  @When("^user clicks \"([^\"]*)\" button on \"([^\"]*)\" page$")
  public void method1(String param21, String param22) throws Throwable {
 // Write code here that turns the phrase above into concrete actions//button1
-  myDriver.clickOnPage(param21, param22);//button1
+//button1
 myDriver.clickOnPage(param21, param22);//<CODE>
  }
 
@@ -264,13 +264,10 @@ myDriver.clickOnPage(param21, param22);//<CODE>
 
  @Then("^user waits for \"([^\"]*)\" seconds$")
 public void method7(String param131) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//waits1
-Thread.sleep(param131*1000);//waits1
-Thread.sleep(param131*1000*1000);//waits1
-Thread.sleep(param131*1000*1000*1000);//waits1
-Thread.sleep(param131*1000*1000*1000*1000);//waits1
-Thread.sleep(param131*1000*1000*1000*1000*1000);//waits1
-Thread.sleep(param131*1000*1000*1000*1000*1000*1000);//<CODE>
+// Write code here that turns the phrase above into concrete actions
+ //waits1
+Thread.sleep(param131*1000);
+//<CODE>
 }
 
  //<METHOD>
