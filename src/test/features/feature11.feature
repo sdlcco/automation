@@ -7,6 +7,7 @@
  And user clicks "AvaxButton" button on "feature11" page
  Given user navigates to "https://app.thor.financial/farm"
  When user clicks "ClaimRewardsButton" button on "feature11" page
+ And user waits "10" seconds
  Then user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html"
  And user clicks "ConfirmButton" button on "feature11" page
  Scenario: Hydrate Drip
