@@ -275,6 +275,14 @@ public void method10(String param21, String param22) throws Throwable {
 myDriver.clickOnPage(param21, param22);//<CODE>
 }
 
+ @Then("^user waits for \"([^\"]*)\" seconds$")
+public void method9(String param131) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//waits1
+int seconds = Integer.parseInt(param131);
+  int milliseconds = 1000;
+Thread.sleep(seconds*milliseconds);//<CODE>
+}
+
  //<METHOD>
 
 
