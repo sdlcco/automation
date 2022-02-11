@@ -15,8 +15,7 @@
  Given user navigates to "https://drip.community/faucet"
  And user clicks "ConnectWalletButton" button on "feature11" page
  And user clicks "ConnectToMetamaskButton" button on "feature11" page
- And user opens new tab
- Then user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html"
+ Then user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html" in new tab
  Then user waits for "10" seconds
  When user clicks "NextButton" button on "feature11" page
  Then user switches to first tab
