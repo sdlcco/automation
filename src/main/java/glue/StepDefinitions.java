@@ -270,11 +270,6 @@ int milliseconds = 1000;
 Thread.sleep(seconds*milliseconds);//<CODE>
 }
 
- @And("^user opens new tab$")
-public void method9() throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//<CODE>
-}
 
  //<METHOD>
 
