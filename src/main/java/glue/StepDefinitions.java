@@ -262,27 +262,6 @@ myDriver.clickOnPage(param21, param22);//<CODE>
   chooseFile.sendKeys(location);
  }
 
-
- @Then("^user navigates to \"([^\"]*)\"$")
-public void method8(String param11) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation2
-driver.get(param11);//<CODE>
-}
-
- @And("^user clicks \"([^\"]*)\" button on \"([^\"]*)\" page$")
-public void method9(String param21, String param22) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//button1
-myDriver.clickOnPage(param21, param22);//<CODE>
-}
-
- @Then("^user waits for \"([^\"]*)\" seconds$")
-public void method10(String param131) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//waits1
-int seconds = Integer.parseInt(param131);
-int milliseconds = 1000;
-Thread.sleep(seconds*milliseconds);//<CODE>
-}
-
  //<METHOD>
 
 
