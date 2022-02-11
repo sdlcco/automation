@@ -25,4 +25,5 @@
  Then user waits for "10" seconds
  When user clicks "NextButton" button on "feature11" page
  When user clicks "ConnectButton" button on "feature11" page
+ And user sees "ConfirmButton" element on "feature11" page
  And user clicks "ConfirmButton" button on "feature11" page
