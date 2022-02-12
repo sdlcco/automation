@@ -17,6 +17,7 @@
  And user clicks "ConnectWalletButton" button on "feature11" page
  And user clicks "ConnectToMetamaskButton" button on "feature11" page
  Then user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html" in new tab
+ And user refreshes tab
  Then user waits for "10" seconds
  When user clicks "NextButton" button on "feature11" page
  Then user switches to first tab
