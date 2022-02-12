@@ -300,12 +300,6 @@ public void method13() throws Throwable {
 driver.navigate().refresh();//<CODE>
 }
 
- @Then("^user navigates to \"([^\"]*)\" in new tab$")
-public void method13(String param141) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation3
-String url = <PARAM>;
-jse.executeScript("window.open('"+url+"', '_blank');");;//<CODE>
-}
 
  //<METHOD>
 
