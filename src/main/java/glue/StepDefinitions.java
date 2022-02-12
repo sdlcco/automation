@@ -287,15 +287,6 @@ public void method11(String param241, String param242) throws Throwable {
 myDriver.verifyObjectPresentOnPage(param241, param242);//<CODE>
 }
 
- @Then("^user navigates to \"([^\"]*)\" in new tab$")
-public void method11(String param141) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation3
-String url = 
-<PARAM>
-;
-jse.executeScript("window.open('"+url+"', '_blank');");;//<CODE>
-}
-
  @And("^user navigates to latest tab$")
 public void method12() throws Throwable {
 // Write code here that turns the phrase above into concrete actions//navigation5
