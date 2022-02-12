@@ -291,7 +291,8 @@ myDriver.verifyObjectPresentOnPage(param241, param242);//<CODE>
  @Then("^user navigates to \"([^\"]*)\" in new tab$")
 public void method11(String param141) throws Throwable {
 // Write code here that turns the phrase above into concrete actions//navigation3
-jse.executeScript("window.open('"+param141+"', '_blank');");//<CODE>
+jse.executeScript("window.open('"+param141+"', '_blank');");//navigation3
+jse.executeScript("window.open('"+'"+param141+"'+"', '_blank');");//<CODE>
 }
 
  @And("^user refreshes tab$")
