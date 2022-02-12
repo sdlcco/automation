@@ -281,17 +281,6 @@ public void method10() throws Throwable {
 driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());//<CODE>
 }
 
- @And("^user sees \"([^\"]*)\" element on \"([^\"]*)\" page$")
-public void method11(String param231, String param232) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//exists1
-myDriver.verifyObjectPresentOnPage(param231, param232);//<CODE>
-}
-
- @Then("^user navigates to \"([^\"]*)\" in new tab$")
-public void method11(String param141) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation3
-driver.ExecuteScript("window.open('param141', '_blank');");//<CODE>
-}
 
  //<METHOD>
 
