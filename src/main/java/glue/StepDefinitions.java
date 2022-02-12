@@ -41,6 +41,7 @@ public class StepDefinitions {
 private WebDriverFactory contextSteps;
 private WebDriver driver;
 private AADriver myDriver;
+ private JavascriptExecutor jse;
 private static Properties properties;
 private String portal;
 private String environment;
@@ -58,6 +59,7 @@ private String environment;
 this.driver = contentSteps.getDriver();
 myDriver = new AADriver(driver);
 properties = Settings.getProperties();
+jse=(JavascriptExecutor)driver;
 }
 
 
@@ -277,14 +279,6 @@ int count = driver.getWindowHandles().size();
 public void method10() throws Throwable {
 // Write code here that turns the phrase above into concrete actions//tabs3
 driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());//<CODE>
-}
-
- @Then("^user navigates to \"([^\"]*)\" in new tab$")
-public void method11(String param131) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation3
-driver.ExecuteScript("window.open('param131', '_blank');");//navigation3
-driver.ExecuteScript("window.open(''param131'', '_blank');");//navigation3
-driver.ExecuteScript("window.open('''param131''', '_blank');");//<CODE>
 }
 
  @And("^user sees \"([^\"]*)\" element on \"([^\"]*)\" page$")
