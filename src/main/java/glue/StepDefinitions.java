@@ -287,26 +287,6 @@ public void method11(String param241, String param242) throws Throwable {
 myDriver.verifyObjectPresentOnPage(param241, param242);//<CODE>
 }
 
- @And("^user navigates to latest tab$")
-public void method12() throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation5
-int count = driver.getWindowHandles().size();
-driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
-}
-
- @And("^user refreshes tab$")
-public void method13() throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation4
-driver.navigate().refresh();//<CODE>
-}
-
-
- @Then("^user navigates to \"([^\"]*)\" in new tab$")
-public void method13(String param141) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation3
-String url = param141;
-jse.executeScript("window.open('"+url+"', '_blank');");;//<CODE>
-}
 
  //<METHOD>
 
