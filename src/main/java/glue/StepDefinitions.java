@@ -266,55 +266,6 @@ int milliseconds = 1000;
 Thread.sleep(seconds*milliseconds);//<CODE>
 }
 
-
- @And("^user opens new tab$")
-public void method9() throws Throwable {
-// Write code here that turns the phrase above into concrete actions//tabs1
-driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL + "t");
-int count = driver.getWindowHandles().size();
- driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
-}
-
- @Then("^user switches to first tab$")
-public void method10() throws Throwable {
-// Write code here that turns the phrase above into concrete actions//tabs3
-driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());//<CODE>
-}
-
- @And("^user sees \"([^\"]*)\" element on \"([^\"]*)\" page$")
-public void method11(String param241, String param242) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//exists1
-myDriver.verifyObjectPresentOnPage(param241, param242);//<CODE>
-}
-
-
- @Then("^user navigates to \"([^\"]*)\" in new tab$")
-public void method11(String param141) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation3
-String url = param141;
-jse.executeScript("window.open('"+url+"', '_blank');");//<CODE>
-}
-
- @And("^user navigates to latest tab$")
-public void method12() throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation5
-int count = driver.getWindowHandles().size();
-driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
-}
-
- @And("^user refreshes tab$")
-public void method13() throws Throwable {
-// Write code here that turns the phrase above into concrete actions////navigation5
-
-int count = driver.getWindowHandles().size();
-driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
-}
-
- @And("^user switches to latest tab$")
-public void method14() throws Throwable {
-// Write code here that turns the phrase above into concrete actions//<CODE>
-}
-
  //<METHOD>
 
 
