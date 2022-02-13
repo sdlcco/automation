@@ -258,6 +258,45 @@ myDriver.clickOnPage(param21, param22);//<CODE>
   chooseFile.sendKeys(location);
  }
 
+ @And("^user clicks \"([^\"]*)\" button on \"([^\"]*)\" page$")
+public void method7(String param21, String param22) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//button1
+myDriver.clickOnPage(param21, param22);//<CODE>
+}
+
+ @Then("^user navigates to \"([^\"]*)\"$")
+public void method8(String param71) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//navigation2
+driver.get(param71);//<CODE>
+}
+
+ @Then("^user navigates to \"([^\"]*)\" in new tab$")
+public void method9(String param131) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//navigation3
+String url = param131;
+jse.executeScript("window.open('"+url+"', '_blank');");//<CODE>
+}
+
+ @Then("^user switches to latest tab$")
+public void method10() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @And("^user refreshes tab$")
+public void method11() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @Then("^user waits for \"([^\"]*)\" seconds$")
+public void method12(String param171) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//waits1
+int seconds = Integer.parseInt(param171);
+int milliseconds = 1000;
+Thread.sleep(seconds*milliseconds);//<CODE>
+}
+
  //<METHOD>
 
 
