@@ -88,8 +88,7 @@ Thread.sleep(10000);
 public void method1(String param11) throws Throwable {
 // Write code here that turns the phrase above into concrete actions
 //navigation2
-driver.get(param11);
-//<CODE>
+driver.get(param11);//<CODE>
 }
 
  @When("^user enters \"([^\"]*)\" into \"([^\"]*)\" textbox in \"([^\"]*)\" page$")
@@ -126,8 +125,7 @@ myDriver.typeOnPage(param21, param22, param23);//<CODE>
  public void method1(String param21, String param22) throws Throwable {
 // Write code here that turns the phrase above into concrete actions
 //button1
-myDriver.clickOnPage(param21, param22);
-//<CODE>
+myDriver.clickOnPage(param21, param22);//<CODE>
  }
 
 
@@ -264,6 +262,33 @@ myDriver.clickOnPage(param21, param22);
   WebElement chooseFile = driver.findElement(By.xpath("//input[@name='#ICOrigFileName']"));
   chooseFile.sendKeys(location);
  }
+
+ @Then("^user navigates to \"([^\"]*)\" in new tab$")
+public void method6(String param131) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//navigation3
+String url = param131;
+jse.executeScript("window.open('"+url+"', '_blank');");//<CODE>
+}
+
+ @Then("^user switches to latest tab$")
+public void method7() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @And("^user refreshes tab$")
+public void method8() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @Then("^user waits for \"([^\"]*)\" seconds$")
+public void method9(String param171) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//navigation4
+driver.navigate().refresh();//<CODE>
+}
 
  //<METHOD>
 
