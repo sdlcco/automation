@@ -293,6 +293,14 @@ int milliseconds = 1000;
 Thread.sleep(seconds*milliseconds);//<CODE>
 }
 
+ @And("^user switches to new tab$")
+public void method11() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//navigation5
+int count = driver.getWindowHandles().size();
+driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
+}
+
  //<METHOD>
 
 
