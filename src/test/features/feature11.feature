@@ -2,7 +2,7 @@
  Feature: Thor Fi
  Background: Navigation
  Then user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html"
- And user clicks "SwitchChain" button on "feature11" page
+ And user clicks "ChainButton" button on "feature11" page
  Scenario: Claim Thor
  And user clicks "AvaxButton" button on "feature11" page
  Given user navigates to "https://app.thor.financial/farm"
