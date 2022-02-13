@@ -9,7 +9,6 @@ import framework.AADriver;
 
 import org.openqa.selenium.WebElement;
 import java.lang.reflect.Field;
-import static org.junit.Assert.assertEquals;
 //<IMPORTS>
 
 public class feature11Page {
@@ -34,11 +33,7 @@ public static By ConnectWalletButton = By.xpath("//button[.='Connect Wallet']");
 
 public static By ConnectToMetamaskButton = By.xpath("//div[.='Connect to your MetaMask Wallet']");
 
-public static By NextButton = By.xpath("//button[.='Next']");
-
 public static By HydrateButton = By.xpath("//button[contains(.,'HYDRATE')]");
-
-public static By ConnectButton = By.xpath("//button[.='Connect']");
 
 //<XPATHS>
 
