@@ -259,6 +259,34 @@ myDriver.clickOnPage(param21, param22);//<CODE>
   chooseFile.sendKeys(location);
  }
 
+ @And("^user waits \"([^\"]*)\" seconds$")
+public void method6(String param61) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//<CODE>
+}
+
+ @Then("^user navigates to \"([^\"]*)\" in new tab$")
+public void method7(String param131) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//navigation2
+driver.get(param131);//<CODE>
+}
+
+ @Then("^user switches to latest tab$")
+public void method8() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @And("^user refreshes tab$")
+public void method9() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @Then("^user waits for \"([^\"]*)\" seconds$")
+public void method10(String param171) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//<CODE>
+}
+
  //<METHOD>
 
 
