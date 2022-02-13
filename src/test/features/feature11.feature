@@ -10,7 +10,6 @@
  And user waits "10" seconds
  Then user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html"
  And user clicks "ConfirmButton" button on "feature11" page
- And user type
  Scenario: Hydrate Drip
  And user clicks "BinanceSmartChainButton" button on "feature11" page
  Given user navigates to "https://drip.community/faucet"
