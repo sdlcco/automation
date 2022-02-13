@@ -310,6 +310,11 @@ int count = driver.getWindowHandles().size();
 driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
 }
 
+ @And("^user switches to latest tab$")
+public void method14() throws Throwable {
+// Write code here that turns the phrase above into concrete actions//<CODE>
+}
+
  //<METHOD>
 
 
