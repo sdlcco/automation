@@ -2,7 +2,7 @@
  Feature: Thor Fi
  Background: Navigation
  Then user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html"
- And user clicks "ChainButton" button on "feature11" page
+ And user clicks "SwitchChain" button on "feature11" page
  Scenario: Claim Thor
  And user clicks "AvaxButton" button on "feature11" page
  Given user navigates to "https://app.thor.financial/farm"
@@ -28,5 +28,5 @@
  Then user waits for "10" seconds
  When user clicks "NextButton" button on "feature11" page
  When user clicks "ConnectButton" button on "feature11" page
- And user sees "ConfirmButton" element on "feature11" page
+ And user sees "xx" element on "feature11" page
  And user clicks "ConfirmButton" button on "feature11" page
