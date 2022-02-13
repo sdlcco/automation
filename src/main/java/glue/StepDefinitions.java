@@ -260,47 +260,6 @@ myDriver.clickOnPage(param21, param22);//<CODE>
   chooseFile.sendKeys(location);
  }
 
-
- @Then("^user navigates to \"([^\"]*)\" in new tab$")
-public void method7(String param11) throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//navigation3
-String url = param11;
-jse.executeScript("window.open('"+url+"', '_blank');");//<CODE>
-}
-
- @Then("^user switches to latest tab$")
-public void method9() throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//navigation5
-int count = driver.getWindowHandles().size();
-driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
-}
-
- @And("^user refreshes tab$")
-public void method10() throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//navigation4
-driver.navigate().refresh();//<CODE>
-}
-
- @Then("^user waits for \"([^\"]*)\" seconds$")
-public void method11(String param171) throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//waits1
-int seconds = Integer.parseInt(param171);
-int milliseconds = 1000;
-Thread.sleep(seconds*milliseconds);//<CODE>
-}
-
- @And("^user switches to new tab$")
-public void method11() throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//navigation5
-int count = driver.getWindowHandles().size();
-driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
-}
-
  //<METHOD>
 
 
