@@ -266,39 +266,6 @@ int milliseconds = 1000;
 Thread.sleep(seconds*milliseconds);//<CODE>
 }
 
-
- @Then("^user navigates to \"([^\"]*)\" in new tab$")
-public void method8(String param141) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation3
-String url = param141;
-jse.executeScript("window.open('"+url+"', '_blank');");//<CODE>
-}
-
- @And("^user switches to latest tab$")
-public void method9() throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation5
-int count = driver.getWindowHandles().size();
-driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
-}
-
- @And("^user refreshes tab$")
-public void method10() throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation4
-driver.navigate().refresh();//<CODE>
-}
-
- @Then("^user switches to first tab$")
-public void method11() throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation5
-int count = driver.getWindowHandles().size();
-driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
-}
-
- @And("^user sees \"([^\"]*)\" element on \"([^\"]*)\" page$")
-public void method12(String param261, String param262) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//<CODE>
-}
-
  //<METHOD>
 
 
