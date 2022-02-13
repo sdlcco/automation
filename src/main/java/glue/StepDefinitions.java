@@ -236,11 +236,6 @@ myDriver.clickOnPage(param21, param22);//<CODE>
   driver.switchTo().defaultContent();
  }
 
- @And("^user waits \"([^\"]*)\" seconds$")
- public void userWaitsSeconds(int seconds) throws Throwable {
-  Thread.sleep(seconds*1000);
- }
-
  @And("^user selects \"([^\"]*)\" value from \"([^\"]*)\" dropdown in \"([^\"]*)\" page$")
  public void userSelectsValueFromDropdownInPage(String selection, String objectName, String pageName) throws Throwable {
   String[] mySelection = selection.split("_");
