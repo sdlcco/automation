@@ -259,6 +259,34 @@ myDriver.clickOnPage(param21, param22);//<CODE>
  }
 
 
+ @Then("^user navigates to \"([^\"]*)\" in new tab$")
+public void method6(String param131) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//waits1
+int seconds = Integer.parseInt(param131);
+int milliseconds = 1000;
+Thread.sleep(seconds*milliseconds);//<CODE>
+}
+
+ @Then("^user switches to latest tab$")
+public void method7() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @And("^user refreshes tab$")
+public void method8() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @Then("^user waits for \"([^\"]*)\" seconds$")
+public void method9(String param171) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//waits1
+int seconds = Integer.parseInt(param171);
+int milliseconds = 1000;
+Thread.sleep(seconds*milliseconds);//<CODE>
+}
+
  //<METHOD>
 
 
