@@ -1,10 +1,8 @@
 @Thor
  Feature: Thor Fi
  Background: Navigation
- Given user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html" in new tab
- And user switches to new tab
- And user refreshes tab
- And user clicks "ChainButton" button on "feature11" page
+ Given user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html"
+ And user clicks "SwitchChainButton" button on "feature11" page
  Scenario: Claim Thor
  And user clicks "AvaxButton" button on "feature11" page
  Given user navigates to "https://app.thor.financial/farm"
