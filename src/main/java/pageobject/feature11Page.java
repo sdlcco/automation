@@ -21,7 +21,7 @@ public static Properties properties;
 /*Xpaths*/
 public static By btnSubmit = By.xpath("(//input[contains(@value, 'Google')])[2]");
 public static By searchBox = By.xpath("//input[@title='Search']");
-public static By ChainButton = By.xpath("//i[@class='network-display__icon app-header__network-down-arrow']");
+public static By SwitchChainButton = By.xpath("//i[@class='network-display__icon app-header__network-down-arrow']");
 
 public static By AvaxButton = By.xpath("(//span[.='Avalanche Mainnet C-Chain'])[last()]");
 
