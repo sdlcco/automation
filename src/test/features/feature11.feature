@@ -2,6 +2,7 @@
  Feature: Thor Fi
  Background: Navigation
  Given user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html" in new tab
+ And user switches to new tab
  And user refreshes tab
  And user clicks "ChainButton" button on "feature11" page
  Scenario: Claim Thor
