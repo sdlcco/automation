@@ -37,6 +37,10 @@ public static By ConnectToMetamaskButton = By.xpath("//div[.='Connect to your Me
 
 public static By HydrateButton = By.xpath("//button[contains(.,'HYDRATE')]");
 
+public static By PolygonMainnetButton = By.xpath("(//span[.='Polygon Mainnet'])[last()]");
+
+public static By CollectButton = By.xpath("//button[contains(.,'Collect')]");
+
 //<XPATHS>
 
 /*Page Constructor*/
