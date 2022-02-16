@@ -21,3 +21,13 @@
  And user refreshes tab
  Then user waits for "10" seconds
  And user clicks "ConfirmButton" button on "feature11" page
+ Scenario: Claim Cubo
+ And user clicks "PolygonMainnetButton" button on "feature11" page
+ Given user navigates to "https://cubo.money/app#"
+ And user waits for "15" seconds
+ When user clicks "CollectButton" button on "feature11" page
+ And user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html" in new tab
+ And user switches to latest tab
+ And user refreshes tab
+ And user waits for "10" seconds
+ Then user clicks "ConfirmButton" button on "feature11" page
