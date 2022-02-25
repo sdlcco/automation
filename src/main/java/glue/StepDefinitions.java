@@ -248,67 +248,7 @@ myDriver.clickOnPage(param21, param22);//<CODE>
   myDriver.selectDropdownOnPage(fullName.trim(),objectName,pageName);
  }
 
- @And("^user switches to iframe with \"([^\"]*)\" id$")
- public void userSwitchesToIframeWithName(String iFrameName) throws Throwable {
-  driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='"+iFrameName+"']")));
- }
 
- @And("^user uploads invoice from \"([^\"]*)\" location$")
- public void userUploadsInvoiceFromLocation(String location) throws Throwable {
-  WebElement chooseFile = driver.findElement(By.xpath("//input[@name='#ICOrigFileName']"));
-  chooseFile.sendKeys(location);
- }
-
- @And("^user waits \"([^\"]*)\" seconds$")
-public void method6(String param61) throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//waits1
-int seconds = Integer.parseInt(param61);
-int milliseconds = 1000;
-Thread.sleep(seconds*milliseconds);//<CODE>
-}
-
- @And("^user mousehover clicks \"([^\"]*)\" button on \"([^\"]*)\" page$")
-public void method7(String param111, String param112) throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//button2
-String object = param111;
-String page = param112;
-myDriver.mouseHoverOnPage(object, page);
-myDriver.clickOnPage(object, page);//<CODE>
-}
-
- @Then("^user navigates to \"([^\"]*)\" in new tab$")
-public void method8(String param131) throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//navigation3
-String url = param131;
-jse.executeScript("window.open('"+url+"', '_blank');");//<CODE>
-}
-
- @Then("^user switches to latest tab$")
-public void method9() throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//navigation5
-int count = driver.getWindowHandles().size();
-driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
-}
-
- @And("^user refreshes tab$")
-public void method10() throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//navigation4
-driver.navigate().refresh();//<CODE>
-}
-
- @Then("^user waits for \"([^\"]*)\" seconds$")
-public void method11(String param171) throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//waits1
-int seconds = Integer.parseInt(param171);
-int milliseconds = 1000;
-Thread.sleep(seconds*milliseconds);//<CODE>
-}
 
  //<METHOD>
 
