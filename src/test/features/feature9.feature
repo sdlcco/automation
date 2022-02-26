@@ -43,7 +43,8 @@
  Given user navigates to "https://theanimal.farm/farms"
  Then user waits for "10" seconds
  When user clicks "HarvestButton" button on "feature9" page
+ Then user waits for "5" seconds
  Then user switches to latest tab
  And user refreshes tab
- Then user waits for "10" seconds
+ Then user waits for "3" seconds
  And user clicks "ConfirmButton" button on "feature9" page
