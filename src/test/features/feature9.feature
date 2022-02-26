@@ -6,7 +6,7 @@
  Scenario: Claim Thor
  And user clicks "AvaxNetworkButton" button on "feature11" page
  Given user navigates to "https://app.thor.financial/farm"
- When user clicks "AvaxClaimRewardsButton" button on "feature11" page
+ When user clicks "ThorClaimRewardsButton" button on "feature11" page
  And user waits "10" seconds
  Then user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html"
  And user clicks "ConfirmButton" button on "feature11" page
@@ -23,6 +23,15 @@
  Given user navigates to "https://cubo.money/app#"
  And user waits for "15" seconds
  When user clicks "CuboCollectButton" button on "feature11" page
+ And user waits for "3" seconds
+ And user switches to latest tab
+ And user refreshes tab
+ And user waits for "5" seconds
+ Then user clicks "ConfirmButton" button on "feature11" page
+ Scenario: Compound Vapor
+ And user clicks "AvaxNetworkButton" button on "feature11" page
+ Given user navigates to "https://app.vapornodes.finance/nodes"
+ When user clicks "CompoundallButton" button on "feature11" page
  And user waits for "3" seconds
  And user switches to latest tab
  And user refreshes tab
