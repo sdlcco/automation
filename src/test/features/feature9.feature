@@ -45,6 +45,5 @@
  When user clicks "HarvestButton" button on "feature9" page
  Then user waits for "5" seconds
  Then user switches to latest tab
- And user refreshes tab
- Then user waits for "3" seconds
+ Then user waits for "1" seconds
  And user clicks "ConfirmButton" button on "feature9" page
