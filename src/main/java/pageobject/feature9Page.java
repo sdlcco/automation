@@ -39,6 +39,8 @@ public static By CuboCollectButton = By.xpath("//button[contains(.,'Collect')]")
 
 public static By CompoundallButton = By.xpath("//button[contains(.,'Compound all')][last()]");
 
+public static By CompoundAllButton = By.xpath("//button[contains(.,'Compound All')][last()]");
+
 //<XPATHS>
 
 /*Page Constructor*/
