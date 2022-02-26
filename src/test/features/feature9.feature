@@ -38,3 +38,11 @@
  And user refreshes tab
  And user waits for "5" seconds
  Then user clicks "ConfirmButton" button on "feature9" page
+ Scenario: Harvest Farm
+ And user clicks "BinanceSmartChainButton" button on "feature9" page
+ Given user navigates to "https://theanimal.farm/farms"
+ When user clicks "HarvestButton" button on "feature9" page
+ Then user switches to latest tab
+ And user refreshes tab
+ Then user waits for "10" seconds
+ And user clicks "ConfirmButton" button on "feature9" page
