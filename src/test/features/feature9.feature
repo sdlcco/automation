@@ -41,6 +41,7 @@
  Scenario: Harvest Farm
  And user clicks "BinanceSmartChainButton" button on "feature9" page
  Given user navigates to "https://theanimal.farm/farms"
+ Then user waits for "10" seconds
  When user clicks "HarvestButton" button on "feature9" page
  Then user switches to latest tab
  And user refreshes tab
