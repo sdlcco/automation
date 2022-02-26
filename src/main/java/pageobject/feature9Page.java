@@ -25,7 +25,7 @@ public static By SwitchChainButton = By.xpath("//i[@class='network-display__icon
 
 public static By AvaxNetworkButton = By.xpath("(//span[contains(.,'Avalanche Network')])[last()]");
 
-public static By AvaxClaimRewardsButton = By.xpath("//span[.='Claim Rewards']/..");
+public static By ThorClaimRewardsButton = By.xpath("//span[.='Claim Rewards']/..");
 
 public static By ConfirmButton = By.xpath("//button[.='Confirm']");
 
@@ -36,6 +36,8 @@ public static By DripHydrateButton = By.xpath("//button[contains(.,'HYDRATE')]")
 public static By PolygonMainnetButton = By.xpath("(//span[.='Polygon Mainnet'])[last()]");
 
 public static By CuboCollectButton = By.xpath("//button[contains(.,'Collect')]");
+
+public static By CompoundallButton = By.xpath("//button[contains(.,'Compound all')][last()]");
 
 //<XPATHS>
 
