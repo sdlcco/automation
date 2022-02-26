@@ -41,6 +41,8 @@ public static By CompoundallButton = By.xpath("//button[contains(.,'Compound all
 
 public static By CompoundAllButton = By.xpath("//button[contains(.,'Compound All')][last()]");
 
+public static By HarvestButton = By.xpath("(//h2[text()='DOGS/WBNB'])[last()]/../../..//button[.='Harvest']");
+
 //<XPATHS>
 
 /*Page Constructor*/
