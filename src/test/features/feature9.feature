@@ -31,7 +31,7 @@
  Scenario: Compound Vapor
  And user clicks "AvaxNetworkButton" button on "feature9" page
  Given user navigates to "https://app.vapornodes.finance/nodes"
- When user clicks "CompoundallButton" button on "feature9" page
+ When user mousehover clicks "CompoundallButton" button on "feature9" page
  And user waits for "3" seconds
  And user switches to latest tab
  And user refreshes tab
