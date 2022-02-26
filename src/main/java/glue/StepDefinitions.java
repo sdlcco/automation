@@ -275,6 +275,12 @@ public void method9(String param141) throws Throwable {
 int seconds = Integer.parseInt(param141);\nint milliseconds = 1000;\nThread.sleep(seconds*milliseconds);//<CODE>
 }
 
+ @When("^user mousehover clicks \"([^\"]*)\" button on \"([^\"]*)\" page$")
+public void method10(String param271, String param272) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//button1
+myDriver.clickOnPage(param271, param272);//<CODE>
+}
+
  //<METHOD>
 
 
