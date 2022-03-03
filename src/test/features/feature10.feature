@@ -38,7 +38,7 @@
  And user clicks "PolygonMainnetButton" button on "feature9" page
  Given user navigates to "https://cubo.money/app#"
  And user waits for "15" seconds
- When user clicks "CuboCollect" button on "feature9" page
+ When user clicks "CuboCollectButton" button on "feature9" page
  And user waits for "3" seconds
  And user switches to latest tab
  And user refreshes tab
