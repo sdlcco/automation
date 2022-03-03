@@ -270,23 +270,6 @@ public void method8(String param131, String param132) throws Throwable {
 myDriver.clickOnPage(param131, param132);//<CODE>
 }
 
- @And("^user waits for \"([^\"]*)\" seconds$")
-public void method9(String param151) throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//<CODE>
-}
-
- @And("^user switches to latest tab$")
-public void method10() throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//<CODE>
-}
-
- @And("^user refreshes tab$")
-public void method11() throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//<CODE>
-}
 
  //<METHOD>
 
