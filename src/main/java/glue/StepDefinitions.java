@@ -249,16 +249,6 @@ myDriver.clickOnPage(param21, param22);//<CODE>
  }
 
 
-
- @And("^user waits \"([^\"]*)\" seconds$")
-public void method6(String param61) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//waits1
-int seconds = Integer.parseInt(param61);\nint milliseconds = 1000;\nThread.sleep(seconds*milliseconds);//waits1
- int seconds = Integer.parseInt(param21);
-  int milliseconds = 1000;
-  Thread.sleep(seconds * milliseconds);//<CODE>
-}
-
  @Then("^user switches to latest tab$")
 public void method7() throws Throwable {
 // Write code here that turns the phrase above into concrete actions//navigation5
