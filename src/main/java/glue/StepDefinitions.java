@@ -291,7 +291,10 @@ driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());/
  @And("^user waits \"([^\"]*)\" seoncds$")
 public void method12(String param21) throws Throwable {
 // Write code here that turns the phrase above into concrete actions//waits1
-int seconds = Integer.parseInt(param21);\nint milliseconds = 1000;\nThread.sleep(seconds*milliseconds);//<CODE>
+int seconds = Integer.parseInt(param21);\nint milliseconds = 1000;\nThread.sleep(seconds*milliseconds);//waits1
+ int seconds = Integer.parseInt(param21);
+  int milliseconds = 1000;
+  Thread.sleep(seconds * milliseconds);//<CODE>
 }
 
  @@Thor("^@Thor$")
