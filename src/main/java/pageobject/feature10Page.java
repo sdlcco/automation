@@ -39,8 +39,6 @@ public static By DripHydrateButton = By.xpath("//button[contains(.,'HYDRATE')]")
 
 public static By PolygonMainnetButton = By.xpath("(//span[.='Polygon Mainnet'])[last()]");
 
-public static By CuboCollectButton = By.xpath("//button[contains(.,'Collect')]");
-
 public static By HarvestButton = By.xpath("(//h2[text()='DOGS/WBNB'])[last()]/../../..//button[.='Harvest']");
 
 //<XPATHS>
