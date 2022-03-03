@@ -84,56 +84,201 @@ Thread.sleep(10000);
 }
 
 
-
- @Given("^user switches to first tab$")
-public void method0() throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation6
-int count = driver.getWindowHandles().size();
-driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());//<CODE>
+@Given("^user navigates to \"([^\"]*)\"$")
+public void method1(String param11) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//navigation2
+driver.get(param11);//<CODE>
 }
+
+ @When("^user enters \"([^\"]*)\" into \"([^\"]*)\" textbox in \"([^\"]*)\" page$")
+public void method17(String param21, String param22, String param23) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//text2
+myDriver.typeOnPage(param21, param22, param23);//<CODE>
+}
+
+
+ @When("^user types \"([^\"]*)\" into \"([^\"]*)\" textbox in \"([^\"]*)\" page$")
+ public void method3(String param21, String param22, String param23) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+  //text2
+  myDriver.typeOnPage(param21, param22, param23);//<CODE>
+ }
+
+
+ @Then("^user types \"([^\"]*)\" into \"([^\"]*)\" textbox$")
+ public void method5(String param31, String param32) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+  //text1
+  myDriver.typeOnPage(RandomStringUtils.randomAlphanumeric(20), param31, param32);//<CODE>
+ }
+
+ @Then("^user clicks on \"([^\"]*)\" button on \"([^\"]*)\" page$")
+ public void method8(String param41, String param42) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+  //button1
+  myDriver.clickOnPage(param41, param42);//<CODE>
+ }
+
+ @When("^user clicks \"([^\"]*)\" button on \"([^\"]*)\" page$")
+ public void method1(String param21, String param22) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//button1
+myDriver.clickOnPage(param21, param22);//<CODE>
+ }
+
+
+ @Given("^user opens \"([^\"]*)\" invoice template$")
+ public void userOpensInvoiceTemplate(String invoicePath) throws Throwable {
+  // load DOCX file
+  filePath = invoicePath;
+  fis = new FileInputStream(filePath);
+// open file
+  file = new XWPFDocument(OPCPackage.open(fis));
+  invoiceData = new HashMap<>();
+
+ }
+
+ @Given("^user updates invoice number to \"([^\"]*)\"$")
+ public void userHasInvoiceTemplate(String invoiceNumber) throws Throwable {
+
+  String invoiceNumberTempValue = "<INV-NUM>";
+
+  System.out.println(LocalDate.now().with( previous( SUNDAY ) ).toString());
+
+  invoiceData.put(invoiceNumberTempValue, invoiceNumber);
+
+
+// display text
+  XWPFWordExtractor ext = new XWPFWordExtractor(file);
+  System.out.println(ext.getText());
+ }
+
+
+ @And("^user updates invoice date to \"([^\"]*)\"$")
+ public void userUpdatesInvoiceDateTo(String date) throws Throwable {
+  invoiceDate = date;
+//  SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+  SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy");
+//  String dateInString = "01-January-2015";
+  Date startDate = formatter.parse(date);
+//  Date formattedStartDate = formatter.parse(date);
+
+
+//  String previousSunday= startDate.toInstant().with(previous(SUNDAY)).toString();
+
+
+//  previousMonday = LocalDate.now().with(previous(MONDAY)).toString();
+//  previousFriday = LocalDate.now().with(previous(FRIDAY)).toString();
+  previousMonday = startDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate().with(previous(MONDAY)).toString();
+  previousFriday = startDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate().with(previous(FRIDAY)).toString();
+  String invoiceDateTempValue = "<DATE>";
+  String invoiceDescriptionTempValue = "<DESCRIPTION>";
+  invoiceData.put(invoiceDateTempValue, date);
+  invoiceData.put(invoiceDescriptionTempValue,previousMonday.concat(" to ").concat(previousFriday).concat(" Invoice"));
+ }
+
+ @And("^user updates invoice hours to \"([^\"]*)\"$")
+ public void userUpdatesInvoiceHoursTo(String hours) throws Throwable {
+  String invoiceHoursTempValue = "<HOURS>";
+  this.hours = hours;
+  invoiceData.put(invoiceHoursTempValue, hours);
+ }
+
+ @And("^user updates invoice rate to \"([^\"]*)\"$")
+ public void userUpdatesInvoiceRateTo(String rate) throws Throwable {
+  String invoiceRateTempValue = "<RATE>";
+  String invoiceTotalTempValue = "<TOTAL>";
+  int total = Integer.parseInt(hours) * Integer.parseInt(rate);
+  invoiceData.put(invoiceRateTempValue, rate);
+  invoiceData.put(invoiceTotalTempValue, String.valueOf(total));
+ }
+
+
+ @And("^user saves document$")
+ public void userSavesDocument() throws IOException {
+  Docx docx = new Docx(file);
+  file = docx.replaceDocxWords(invoiceData);
+  file.write(new FileOutputStream("C:\\Users\\VADR\\Documents\\Artech Invoicing\\output.docx"));
+
+ }
+
+ @And("^user prints out invoice with \"([^\"]*)\" pdf name$")
+ public void userPrintsOutPdf(String pdfName) throws Throwable{
+
+  String outputPath = filePath.replace("Invoice Template.docx", pdfName+".pdf");
+  FileInputStream in = new FileInputStream("C:\\Users\\VADR\\Documents\\Artech Invoicing\\output.docx");
+// open file
+  XWPFDocument document = new XWPFDocument(OPCPackage.open(in));
+//  InputStream in = new FileInputStream(new File(filePath.replace("Invoice Template.docx","output.docx")));
+//  XWPFDocument document = new XWPFDocument(in);
+  PdfOptions options = PdfOptions.create();
+  OutputStream out = new FileOutputStream(new File(outputPath));
+  PdfConverter.getInstance().convert(document,out,options);
+
+//
+ }
+
+ @And("^pause$")
+ public void user() throws InterruptedException {
+  Thread.sleep(3000);
+ }
+
+
+ @Then("^user switches into \"([^\"]*)\" iframe on \"([^\"]*)\" page$")
+ public void userSwitchesIntoIframeOnPage(String iframeName, String pageName) throws Throwable {
+  myDriver.switchToIframe(iframeName,pageName);
+ }
+
+ @Then("^user switches out of iframe$")
+ public void userSwitchesOutOfIframe() {
+  driver.switchTo().defaultContent();
+ }
+
+
+ @And("^user selects \"([^\"]*)\" value from \"([^\"]*)\" dropdown in \"([^\"]*)\" page$")
+ public void userSelectsValueFromDropdownInPage(String selection, String objectName, String pageName) throws Throwable {
+  String[] mySelection = selection.split("_");
+  String fullName = "";
+  for (String s: mySelection
+       ) {
+   fullName = fullName.concat(" ").concat(s);
+  }
+  myDriver.selectDropdownOnPage(fullName.trim(),objectName,pageName);
+ }
+
+
 
  @And("^user waits \"([^\"]*)\" seconds$")
-public void method1(String param21) throws Throwable {
+public void method6(String param61) throws Throwable {
 // Write code here that turns the phrase above into concrete actions//waits1
- int seconds = Integer.parseInt(param21);
-  int milliseconds = 1000;
-  Thread.sleep(seconds * milliseconds);//<CODE>
+int seconds = Integer.parseInt(param61);\nint milliseconds = 1000;\nThread.sleep(seconds*milliseconds);//<CODE>
 }
 
- @When("^user navigates to \"([^\"]*)\"$")
-public void method2(String param31) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//navigation2
-driver.get(param31);//<CODE>
-}
-
- @And("^user clicks \"([^\"]*)\" button on \"([^\"]*)\" page$")
-public void method3(String param41, String param42) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//button1
-myDriver.clickOnPage(param41, param42);//<CODE>
-}
-
- @When("^user mousehover clicks \"([^\"]*)\" button on \"([^\"]*)\" page$")
-public void method4(String param131, String param132) throws Throwable {
-// Write code here that turns the phrase above into concrete actions//button1
-myDriver.clickOnPage(param131, param132);//<CODE>
-}
-
- @And("^user waits for \"([^\"]*)\" seconds$")
-public void method5(String param151) throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//<CODE>
-}
-
- @And("^user switches to latest tab$")
-public void method6() throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//<CODE>
+ @Then("^user switches to latest tab$")
+public void method7() throws Throwable {
+// Write code here that turns the phrase above into concrete actions//navigation5
+int count = driver.getWindowHandles().size();
+driver.switchTo().window(driver.getWindowHandles().stream().skip(count - 1).findFirst().get());//<CODE>
 }
 
  @And("^user refreshes tab$")
-public void method7() throws Throwable {
-// Write code here that turns the phrase above into concrete actions
-//<CODE>
+public void method8() throws Throwable {
+// Write code here that turns the phrase above into concrete actions//navigation4
+driver.navigate().refresh();//<CODE>
+}
+
+ @Then("^user waits for \"([^\"]*)\" seconds$")
+public void method9(String param141) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//waits1
+int seconds = Integer.parseInt(param141);\nint milliseconds = 1000;\nThread.sleep(seconds*milliseconds);//<CODE>
+}
+
+ @When("^user mousehover clicks \"([^\"]*)\" button on \"([^\"]*)\" page$")
+public void method10(String param271, String param272) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//button1
+myDriver.clickOnPage(param271, param272);//<CODE>
 }
 
  //<METHOD>
