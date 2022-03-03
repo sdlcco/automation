@@ -282,6 +282,44 @@ int count = driver.getWindowHandles().size();
 driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());//<CODE>
 }
 
+ @And("^user waits \"([^\"]*)\" seconds$")
+public void method11(String param21) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//waits1
+ int seconds = Integer.parseInt(param21);
+  int milliseconds = 1000;
+  Thread.sleep(seconds * milliseconds);//<CODE>
+}
+
+ @@Thor("^@Thor$")
+public void method12() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @@Vapor("^@Vapor$")
+public void method13() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @@Drip("^@Drip$")
+public void method14() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @@Cubo("^@Cubo$")
+public void method15() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @@Farm("^@Farm$")
+public void method16() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
  //<METHOD>
 
 
