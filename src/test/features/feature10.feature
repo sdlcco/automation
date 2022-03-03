@@ -2,7 +2,7 @@
  Feature: Thor Fi
  Background: Navigation
  Given user switches to first tab
- And user waits "3" seoncds
+ And user waits "3" seconds
  When user navigates to "chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html"
  And user clicks "SwitchChainButton" button on "feature9" page
  @Thor
