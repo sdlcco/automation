@@ -282,6 +282,14 @@ int count = driver.getWindowHandles().size();
 driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());//<CODE>
 }
 
+ @And("^user waits \"([^\"]*)\" seconds$")
+public void method11(String param21) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//waits1
+ int seconds = Integer.parseInt(param21);
+  int milliseconds = 1000;
+  Thread.sleep(seconds * milliseconds);//<CODE>
+}
+
  //<METHOD>
 
 
