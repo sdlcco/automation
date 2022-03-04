@@ -253,7 +253,10 @@ myDriver.clickOnPage(param21, param22);//<CODE>
  @And("^user waits \"([^\"]*)\" seconds$")
 public void method6(String param61) throws Throwable {
 // Write code here that turns the phrase above into concrete actions//waits1
-int seconds = Integer.parseInt(param61);\nint milliseconds = 1000;\nThread.sleep(seconds*milliseconds);//<CODE>
+int seconds = Integer.parseInt(param61);\nint milliseconds = 1000;\nThread.sleep(seconds*milliseconds);//waits1
+ int seconds = Integer.parseInt(param21);
+  int milliseconds = 1000;
+  Thread.sleep(seconds * milliseconds);//<CODE>
 }
 
  @Then("^user switches to latest tab$")
@@ -279,6 +282,13 @@ int seconds = Integer.parseInt(param141);\nint milliseconds = 1000;\nThread.slee
 public void method10(String param271, String param272) throws Throwable {
 // Write code here that turns the phrase above into concrete actions//button1
 myDriver.clickOnPage(param271, param272);//<CODE>
+}
+
+ @Given("^user switches to first tab$")
+public void method11() throws Throwable {
+// Write code here that turns the phrase above into concrete actions//navigation6
+int count = driver.getWindowHandles().size();
+driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());//<CODE>
 }
 
  //<METHOD>
