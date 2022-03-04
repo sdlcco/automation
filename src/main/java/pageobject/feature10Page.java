@@ -25,6 +25,8 @@ public static By MetamaskSwitchChainButton = By.xpath("//i[@class='network-displ
 
 public static By AvaxNetworkButton = By.xpath("(//span[contains(.,'Avalanche Network')])[last()]");
 
+public static By ThorClaimButton = By.xpath("//span[.='Claim Rewards']/..");
+
 public static By ConfirmButton = By.xpath("//button[.='Confirm']");
 
 public static By CompoundallButton = By.xpath("//button[contains(.,'Compound all')][last()]");
