@@ -35,6 +35,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.apache.commons.lang.RandomStringUtils;
 import pageobject.feature11Page;
+import pageobject.feature2Page;
 //<IMPORTS>
 
 public class StepDefinitions {
@@ -253,6 +254,12 @@ public void method6() throws Throwable {
 // Write code here that turns the phrase above into concrete actions//navigation6
 int count = driver.getWindowHandles().size();
 driver.switchTo().window(driver.getWindowHandles().stream().findFirst().get());//<CODE>
+}
+
+ @When("^user sees \"([^\"]*)\" element on \"([^\"]*)\" page$")
+public void method7(String param21, String param22) throws Throwable {
+// Write code here that turns the phrase above into concrete actions//exists1
+myDriver.verifyObjectPresentOnPage(param21, param22);//<CODE>
 }
 
  //<METHOD>
