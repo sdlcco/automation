@@ -21,9 +21,9 @@ public static Properties properties;
 /*Xpaths*/
 public static By btnSubmit = By.xpath("(//input[contains(@value, 'Google')])[2]");
 public static By searchBox = By.xpath("//input[@title='Search']");
-public static By MetamaskSwitchChainButton = By.xpath("//i[@class='network-display__icon app-header__network-down-arrow']");
+public static By SwitchChainButton = By.xpath("//i[@class='network-display__icon app-header__network-down-arrow']");
 
-public static By AvaxNetworkButton = By.xpath("(//span[contains(.,'Avalanche Network')])[last()]");
+public static By AvalancheNetworkButton = By.xpath("(//span[contains(.,'Avalanche Network')])[last()]");
 
 public static By ThorClaimButton = By.xpath("//span[.='Claim Rewards']/..");
 
@@ -33,7 +33,7 @@ public static By CompoundallButton = By.xpath("//button[contains(.,'Compound all
 
 public static By CompoundAllButton = By.xpath("//button[contains(.,'Compound All')][last()]");
 
-public static By BinanceNetworkButton = By.xpath("(//span[contains(.,'Smart Chain')])[last()]");
+public static By BinanceSmartChainButton = By.xpath("(//span[contains(.,'Smart Chain')])[last()]");
 
 public static By DripHydrateButton = By.xpath("//button[contains(.,'HYDRATE')]");
 
