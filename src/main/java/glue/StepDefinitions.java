@@ -250,6 +250,42 @@ myDriver.clickOnPage(param21, param22);//<CODE>
  }
 
 
+ @Given("^user switches to first tab$")
+public void method6() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @And("^user waits \"([^\"]*)\" seconds$")
+public void method7(String param21) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @When("^user mousehover clicks \"([^\"]*)\" button on \"([^\"]*)\" page$")
+public void method8(String param131, String param132) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @And("^user waits for \"([^\"]*)\" seconds$")
+public void method9(String param151) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @And("^user switches to latest tab$")
+public void method10() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
+ @And("^user refreshes tab$")
+public void method11() throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+//<CODE>
+}
+
  //<METHOD>
 
 
