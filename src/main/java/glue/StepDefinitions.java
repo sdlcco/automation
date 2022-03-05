@@ -273,7 +273,11 @@ public void method8(String param21) throws Throwable {
  @When("^user mousehover clicks \"([^\"]*)\" button on \"([^\"]*)\" page$")
 public void method9(String param131, String param132) throws Throwable {
 // Write code here that turns the phrase above into concrete actions//button1
-myDriver.clickOnPage(param131, param132);//<CODE>
+myDriver.clickOnPage(param131, param132);//button2
+String object = <PARAM>;
+String page = <PARAM>;
+myDriver.mouseHoverOnPage(object, page);
+myDriver.clickOnPage(object, page);//<CODE>
 }
 
  @And("^user waits for \"([^\"]*)\" seconds$")
